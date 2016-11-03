@@ -1,0 +1,25 @@
+<div class='jumbotron'>
+	<div class="alert alert-success">Click {{#link-to 'posts'}}here{{/link-to}} to see all post.</div>
+	<div class="panel panel-default library-item">
+		<div class="panel-heading">
+			<u><h3 class="panel-title">Title:</h3></u>
+			<h3 class="panel-title">{{model.title}}</h3>
+		</div>
+
+		<div class="panel-heading">
+			<u><h3 class="panel-title">Post:</h3></u>
+			<h3 class="panel-title">{{model.description}}</h3>
+		</div>
+		<div class="panel-heading">
+			<u><h3 class="panel-title">Author:</h3></u>	
+			<h3 class="panel-title">  {{model.author}}</h3>
+		</div>
+	</div>
+
+	<button class="btn btn-danger btn col-md-2" {{action 'deletePost' model }}>Delete Post</button>
+	<div class="btn col-md-8" ></div>
+	{{#link-to 'post.edit' model class='btn btn-success col-md-2'}}Edit Post{{/link-to}}
+	
+	{{outlet}}
+
+</div>

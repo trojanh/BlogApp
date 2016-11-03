@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+	<h2>Create a new post</h2>
+
+	
+	<div class="form-horizontal form-group form-group-lg row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+			{{input type="text" value=title class="form-control" placeholder="Enter the title here" autofocus="autofocus"}}
+		</div>
+
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+			{{input type="text" value=author class="form-control" placeholder="Enter your name here" }}
+		</div>
+
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+
+			{{textarea class="form-control" placeholder="Your post" rows="5" value=description}}
+
+		</div>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+			<button class="btn btn-success" {{action 'sendPost'}} >Submit Post</button>
+		</div>
+	</div>
+
+	{{#if sendPost}}
+	<div class="alert alert-success">{{sendPost}}</div>
+	{{/if}}
+
+	<br/><br/>
+
+</div>

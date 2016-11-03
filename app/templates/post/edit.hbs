@@ -1,0 +1,19 @@
+<div class="form-horizontal form-group form-group-lg row">
+	<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+		{{input type="text" value=model.title class="form-control" placeholder="Enter the title here" autofocus="autofocus"}}
+	</div>
+
+	<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+		{{input type="text" value=model.author class="form-control" placeholder="Enter your name here" }}
+	</div>
+
+	<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+
+		{{textarea class="form-control" placeholder="Your post" rows="5" value=model.description}}
+
+	</div>
+	<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-3">
+		{{!-- <button class="btn btn-success" {{action 'savePost'}} >Submit Post</button> --}}
+		{{#link-to 'posts'	 class='btn btn-success col-md-2'}}Submit Post{{/link-to}}
+	</div>
+</div>
