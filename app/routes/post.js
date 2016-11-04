@@ -13,6 +13,12 @@ export default Ember.Route.extend({
 				this.transitionTo('posts');
 			}
 		}
-	}
+	},
+	// renderTemplate: function() {
+	// 	this.render( 'post',{
+	// 		outlet: 'posts'            
+
+	// 	});       
+	// }
 
 });

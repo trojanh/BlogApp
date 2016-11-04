@@ -19,10 +19,10 @@ export default Ember.Controller.extend({
 			this.set('title','');
 			this.set('description','');
 
-			post.save().then((response)=>{
+			post.save()/*.then((response)=>{
 
 
-			});
+			})*/;
 			this.set('sendPost',author+ `, Your Post has been published`);
 
 			
